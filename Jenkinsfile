@@ -88,7 +88,7 @@ pipeline{
                 }
                 
                 // Copy the contents of the docs directory to the gh-pages branch
-                bat "xcopy /s ..\\angular-project\\docs ."
+                bat "xcopy /s ..\\docs ."
                 
                 // Add, commit, and push the changes to the gh-pages branch
                 bat "git add ."
