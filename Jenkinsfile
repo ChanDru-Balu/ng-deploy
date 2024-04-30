@@ -63,6 +63,13 @@ pipeline{
         stage('Deploy to GitHub Pages') {
     steps {
         script {
+
+                        // Verify the existence of the docs directory
+            def docsDir = 'angular-project/docs'
+            if (!fileExists(docsDir)) {
+                error "The 'docs' directory does not exist or is empty."
+            }
+
             // Copy the build artifacts to a separate directory
             dir('angular-project') {
                 bat "xcopy /s /e /y docs ..\\gh-pages"
