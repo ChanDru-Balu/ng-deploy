@@ -72,7 +72,7 @@ pipeline{
 
             // Copy the build artifacts to a separate directory
             // dir('angular-project') {
-                bat "xcopy /s /e /y .\\docs ..\\gh-pages"
+                bat "xcopy /s /e /y /i .\\docs ..\\gh-pages"
             // }
             
             // Navigate to the gh-pages directory
