@@ -26,7 +26,7 @@ pipeline{
                         // Build Angular project for production
                         bat "npm install -g @angular/cli"
                         bat "npm install"
-                        bat "ng build --output-path docs --base-href /"
+                        bat "ng build"
                     }
                 }
             }
