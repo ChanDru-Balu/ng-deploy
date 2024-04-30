@@ -13,6 +13,7 @@ pipeline{
     stages{
         stage('Clone Repository'){
             steps{
+                // New Git Repo
                 git 'https://github.com/ChanDru-Balu/ng-deploy'
             }
         }
