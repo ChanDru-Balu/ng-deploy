@@ -26,7 +26,7 @@ pipeline{
                         // Build Angular project for production
                         bat "npm install -g @angular/cli"
                         bat "npm install"
-                        bat "ng build"
+                        bat "ng build --output-path docs --base-href /"
                     }
                 }
             }
@@ -65,7 +65,7 @@ pipeline{
         script {
 
                         // Verify the existence of the docs directory
-            def docsDir = 'angular-project/docs'
+            def docsDir = 'docs'
             if (!fileExists(docsDir)) {
                 error "The 'docs' directory does not exist or is empty."
             }
