@@ -92,12 +92,11 @@ pipeline{
                 // bat "xcopy /s docs ."
                 
                 // Add, commit, and push the changes to the gh-pages branch
-                bat 'git branch'
-                bat "git checkout main"
+                bat 'git branch --all'
 
                 bat "git add ."
                 bat 'git commit -m "Update GitHub Pages"'
-                bat "git push origin main" 
+                bat "git push origin remotes/origin/gh-pages" 
             }
         }
     }
