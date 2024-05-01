@@ -95,8 +95,8 @@ pipeline{
                 // bat 'git remote -v'
                 bat 'git branch --all'
 
-                bat 'git push origin master'
-                bat 'git checkout master'
+                bat 'git push origin main'
+                bat 'git checkout main'
                 // Add, commit, and push the changes to the gh-pages branch
                 bat 'git branch --all'
 
