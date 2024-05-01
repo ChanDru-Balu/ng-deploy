@@ -94,7 +94,7 @@ pipeline{
                 // Add, commit, and push the changes to the gh-pages branch
                 bat "git add ."
                 bat 'git commit -m "Update GitHub Pages"'
-                bat "git push origin gh-pages"
+                bat "git push gh-pages"
             }
         }
     }
