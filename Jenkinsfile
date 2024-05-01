@@ -78,15 +78,15 @@ pipeline{
             // Navigate to the gh-pages directory
             dir('../gh-pages') {
                 // Check if the gh-pages branch exists
-                if (fileExists('.git')) {
-                    bat "git status"
-                    // If the gh-pages branch exists, checkout the branch
-                    bat "git checkout  gh-pages"
-                } else {
-                    // If the gh-pages branch doesn't exist, create a new branch
-                    bat "git init"
-                    bat "git checkout -b gh-pages"
-                }
+                // if (fileExists('.git')) {
+                //     bat "git status"
+                //     // If the gh-pages branch exists, checkout the branch
+                //     bat "git checkout  gh-pages"
+                // } else {
+                //     // If the gh-pages branch doesn't exist, create a new branch
+                //     bat "git init"
+                //     bat "git checkout -b gh-pages"
+                // }
                 
                 // Copy the contents of the docs directory to the gh-pages branch
                 // bat "xcopy /s docs ."
@@ -94,8 +94,7 @@ pipeline{
                 // Add, commit, and push the changes to the gh-pages branch
                 bat "git add ."
                 bat 'git commit -m "Update GitHub Pages"'
-                bat 'git remote add origin https://github.com/ChanDru-Balu/ng-deploy.git'
-                bat "git push origin gh-pages" 
+                bat "git push origin main" 
             }
         }
     }
