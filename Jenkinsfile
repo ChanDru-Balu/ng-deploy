@@ -90,7 +90,8 @@ pipeline{
                 
                 // Copy the contents of the docs directory to the gh-pages branch
                 // bat "xcopy /s docs ."
-                
+                bat 'git fetch origin main'
+                bat 'git checkout main'
                 // Add, commit, and push the changes to the gh-pages branch
                 bat 'git branch --all'
 
