@@ -68,7 +68,7 @@ pipeline{
             def docsDir = 'docs'
             if (!fileExists(docsDir)) {
                 error "The 'docs' directory does not exist or is empty."
-            }
+            }   
 
             // Copy the build artifacts to a separate directory
             // dir('angular-project') {
@@ -81,7 +81,7 @@ pipeline{
                 if (fileExists('.git')) {
                     bat "git status"
                     // If the gh-pages branch exists, checkout the branch
-                    bat "git checkout -b gh-pages"
+                    bat "git checkout gh-pages"
                 } else {
                     // If the gh-pages branch doesn't exist, create a new branch
                     bat "git init"
@@ -89,7 +89,7 @@ pipeline{
                 }
                 
                 // Copy the contents of the docs directory to the gh-pages branch
-                bat "xcopy /s docs ."
+                // bat "xcopy /s docs ."
                 
                 // Add, commit, and push the changes to the gh-pages branch
                 bat "git add ."
