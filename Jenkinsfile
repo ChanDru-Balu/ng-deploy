@@ -93,6 +93,8 @@ pipeline{
                 bat 'git remote -v'
                 // bat 'git remote add origin git@github.com:ChanDru-Balu/ng-deploy.git'
                 // bat 'git remote -v'
+                bat 'git fetch origin'
+                bat 'git branch -r'
                 bat 'git branch --all'
 
                 bat 'git push origin main'
