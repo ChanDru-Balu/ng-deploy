@@ -93,8 +93,10 @@ pipeline{
                 bat 'git remote -v'
                 // bat 'git remote add origin git@github.com:ChanDru-Balu/ng-deploy.git'
                 // bat 'git remote -v'
-                bat 'git fetch origin main'
-                bat 'git checkout main'
+                bat 'git branch --all'
+
+                bat 'git fetch origin master'
+                bat 'git checkout master'
                 // Add, commit, and push the changes to the gh-pages branch
                 bat 'git branch --all'
 
