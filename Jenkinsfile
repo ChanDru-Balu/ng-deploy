@@ -90,6 +90,7 @@ pipeline{
                 
                 // Copy the contents of the docs directory to the gh-pages branch
                 // bat "xcopy /s docs ."
+                bat 'git remote -v'
                 bat 'git remote add origin git@github.com:ChanDru-Balu/ng-deploy.git'
                 bat 'git remote -v'
                 bat 'git fetch origin main'
