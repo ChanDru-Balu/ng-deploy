@@ -102,7 +102,7 @@ pipeline{
 
                 bat "git add ."
                 bat 'git commit -m "Update GitHub Pages"'
-                bat "git push origin remotes/origin/gh-pages" 
+                bat "git push origin master" 
             }
         }
     }
