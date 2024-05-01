@@ -81,7 +81,7 @@ pipeline{
                 if (fileExists('.git')) {
                     bat "git status"
                     // If the gh-pages branch exists, checkout the branch
-                    bat "git checkout -b gh-pages"
+                    bat "git checkout  gh-pages"
                 } else {
                     // If the gh-pages branch doesn't exist, create a new branch
                     bat "git init"
