@@ -92,6 +92,7 @@ pipeline{
                 // bat "xcopy /s docs ."
                 
                 // Add, commit, and push the changes to the gh-pages branch
+                bat 'git branch'
                 bat "git checkout main"
 
                 bat "git add ."
