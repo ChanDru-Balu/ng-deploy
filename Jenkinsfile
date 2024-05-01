@@ -94,7 +94,8 @@ pipeline{
                 // Add, commit, and push the changes to the gh-pages branch
                 bat "git add ."
                 bat 'git commit -m "Update GitHub Pages"'
-                bat "git push gh-pages"
+                bat 'git remote add origin https://github.com/ChanDru-Balu/ng-deploy.git'
+                bat "git push origin gh-pages" 
             }
         }
     }
